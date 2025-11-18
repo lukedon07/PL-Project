@@ -1,4 +1,9 @@
 public class main {
 
-    //helloooooo
+    boolean this_works = false;
+
+    public boolean isThis_works() {
+        return this_works;
+    }
+
 }
