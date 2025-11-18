@@ -1,9 +1,7 @@
-public class main {
-
-    boolean this_works = false;
-
-    public boolean isThis_works() {
-        return this_works;
+class Main {
+    public static void main(String[] args) {
+        
+        while(true){
+        System.out.println("E");}
     }
-
 }
