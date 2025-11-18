@@ -1,4 +1,7 @@
-public class main {
-
-    //helloooooo
+class Main {
+    public static void main(String[] args) {
+        
+        while(true){
+        System.out.println("E");}
+    }
 }
