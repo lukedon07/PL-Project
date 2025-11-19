@@ -1,6 +1,7 @@
 
 h1{
     color: #051094;
+    font-family: fantasy, sans-serif, serif;
 }
 .smallFont{
     font-size: 10pt;
@@ -10,4 +11,5 @@ h1{
 }
 .largeFont{
     font-size: 20pt;
+    font-weight: bold;
 }
