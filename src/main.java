@@ -1,7 +1,11 @@
 class Main {
     public static void main(String[] args) {
-        
-        while(true){
-        System.out.println("E");}
+
+        boolean x = true;
+        while(x){
+        System.out.println("E");
+            x = false;
+        }
+
     }
 }
