@@ -3,7 +3,7 @@ class Main {
 
         boolean x = true;
         while(x){
-        System.out.println("E");
+            System.out.println("E");
             x = false;
         }
 
