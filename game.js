@@ -6,5 +6,7 @@ function myFirstFunction(){
 const button = document.createElement("myButton");
 button.innertext = "Click This!";
 
-button.addEventListener("click", myFirstFunction);
+button.addEventListener("click", () => {
+    alert("button clicked!");
+});
 document.body.appendChild(button);
