@@ -4,15 +4,22 @@ function myFirstFunction() {
 }
 
 function button() {
-    const button = document.createElement("button");
-    button.innerText = "Click This!";
+    const openButton = document.getElementById("openGameButton");
+    const closeButton = document.getElementById("closeGameButton");
+    const gameWindow = document.getElementById("gameWindow");
+
+    openButton.innerText = "Click This To Play A Game!";
 
     document.body.appendChild(button);
 
-    button.addEventListener("click", () => {
-        alert("BUTTON HAS BEEN CLICKED");
+    openButton.addEventListener("click", () => {
+        gameWindow.style.display = "block";
         myFirstFunction();
     });
+
+    closeButton.addEventListener("click", () => {
+        gameWindow.style.display = "none";
+    })
 }
 
 button();
