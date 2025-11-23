@@ -3,10 +3,18 @@ function myFirstFunction(){
     document.body.innerHTML += "<p>" + aString + "</p>";
 }
 
-const button = document.createElement("myButton");
-button.innertext = "Click This!";
+function button(){
+    const button = document.createElement("myButton");
+    button.innertext = "Click This!";
+    document.body.appendChild(button);
 
-button.addEventListener("click", () => {
-    alert("button clicked!");
-});
-document.body.appendChild(button);
+    button.addEventListener("click", () => {
+        alert("button clicked!");
+    });
+
+}
+
+button()
+
+
+
