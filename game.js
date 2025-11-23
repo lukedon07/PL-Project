@@ -1,20 +1,18 @@
-function myFirstFunction() {
+function createGame() {
     let aString = "This function should be called once the button has been clicked";
     document.body.innerHTML += "<p>" + aString + "</p>";
 }
 
-function button() {
+function initializeButtons() {
     const openButton = document.getElementById("openGameButton");
     const closeButton = document.getElementById("closeGameButton");
     const gameWindow = document.getElementById("gameWindow");
 
     openButton.innerText = "Click This To Play A Game!";
 
-    document.body.appendChild(button);
-
     openButton.addEventListener("click", () => {
         gameWindow.style.display = "block";
-        myFirstFunction();
+        createGame();
     });
 
     closeButton.addEventListener("click", () => {
@@ -22,7 +20,7 @@ function button() {
     })
 }
 
-button();
+document.addEventListener("DOMContentLoaded", initializeButtons);
 
 
 
