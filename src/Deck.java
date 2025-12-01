@@ -6,20 +6,36 @@ import java.util.Random;
 public class Deck {
 
     private List<Card> deck;
+    private List<Card> discardPile =  new ArrayList<>();
 
     public Deck(){
-        deck = new ArrayList<>();
+        this.deck = new ArrayList<>();
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 
         for (String suit : suits) {
             for (String rank : ranks) {
-                deck.add(new Card(rank, suit));
+                this.deck.add(new Card(rank, suit));
             }
         }
     }
 
+    public Integer getDeckSize() {
+        return this.deck.size();
+    }
+
     public void shuffleDeck() {
+        Collections.shuffle(deck);
+    }
+
+    public Card dealCard() {
+        Card c = deck.removeFirst();
+        discardPile.add(c);
+        return c;
+    }
+
+    public void refreshDeck() {
+        deck.addAll(discardPile);
         Collections.shuffle(deck);
     }
 
